@@ -7,7 +7,15 @@
 
 #include <decomp_util/data_utils.h>
 #include <iostream>
+
+// BAD HEADER
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+#pragma GCC diagnostic ignored "-Wignored-attributes"
+#pragma GCC diagnostic ignored "-Wmisleading-indentation"
 #include <Eigen/Eigenvalues>
+#pragma GCC diagnostic pop
+// END BAD HEADER
 
 ///Compensate for numerical error
 constexpr decimal_t epsilon_ = 1e-6; // numerical calculation effect
